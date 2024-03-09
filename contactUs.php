@@ -106,18 +106,18 @@
   <div class="header">
     <img class="logo" src="Images/logo.jpg" alt="Logo">
     <div class="navigation">
-      <a href="Index.html"> Home</a>
-      <a href="AboutUs.html">About Us</a>
-      <a href="ourservices.html">Our Services</a>
-      <a href="contactUs.html">Contact Us</a>
-      <a href="Blog&News.html">Blog & News</a>
+      <a href="Index.php"> Home</a>
+      <a href="AboutUs.php">About Us</a>
+      <a href="ourservices.php">Our Services</a>
+      <a href="contactUs.php">Contact Us</a>
+      <a href="Blog&News.php">Blog & News</a>
     </div>
   </div>
 
   <div class="contact-container">
     <div class="contact-form">
       <h2>Contact Us</h2>
-      <form action="#" method="post">
+      <form action="Contact_backend.php" method="post">
         <input type="text" name="name" placeholder="Your Name" required><br>
         <input type="email" name="email" placeholder="Your Email" required><br>
         <textarea name="message" rows="5" placeholder="Your Message" required></textarea><br>
@@ -144,6 +144,32 @@
       </div>
     </div>
   </div>
-</body>
 
+<script>
+  // JavaScript or jQuery code to handle form submission
+  $(document).ready(function() {
+    $('#contactForm').submit(function(event) {
+      event.preventDefault(); // Prevent default form submission
+
+      $.ajax({
+        type: 'POST',
+        url: 'contact.php',
+        data: $(this).serialize(),
+        dataType: 'json',
+        success: function(response) {
+          // Display status message
+          $('#statusMessage').text(response.message);
+        },
+        error: function() {
+          // Display error message if AJAX request fails
+          $('#statusMessage').text('Oops! Something went wrong. Please try again later.');
+        }
+      });
+    });
+  });
+</script>
+
+<div id="statusMessage"></div>
+
+</body>
 </html>

@@ -72,7 +72,7 @@
 <body>
   <div class="login-container">
     <h2 style="background-color: rgba(54, 137, 131, 0.5);text-align:center;">Login</h2>
-    <form action="User_dashboard.html" method="post" name="loginForm" id="loginForm" onsubmit="return redirectUser()">
+    <form action="User_dashboard.php" method="post" name="loginForm" id="loginForm" onsubmit="return redirectUser()">
       <div class="form-group">
         <label for="username"> Username </label>
         <input type="text" id="username" name="username" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>

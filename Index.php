@@ -132,11 +132,11 @@
   <div class="header">
     <img class="logo" src="Images/logo.jpg" alt="Logo">
     <div class="navigation">
-      <a href="Index.html"> Home</a>
-      <a href="AboutUs.html">About Us</a>
-      <a href="ourservices.html">Our Services</a>
-      <a href="contactUs.html">Contact Us</a>
-      <a href="BlogNews.html">Blog & News</a>
+      <a href="Index.php"> Home</a>
+      <a href="AboutUs.php">About Us</a>
+      <a href="ourservices.php">Our Services</a>
+      <a href="contactUs.php">Contact Us</a>
+      <a href="BlogNews.php">Blog & News</a>
     </div>
   </div>
 
@@ -151,8 +151,8 @@
         <h1 style="background-color: rgba(54, 137, 131, 0.5);"><strong>Welcome to Natembea Online</strong></h1>
         <p style="background-color: rgba(54, 137, 131, 0.5);">Explore the amazing medical services we offer.</p>
         <div class="button-container">
-          <button class="button" onclick="window.location.href='login.html'">Login</button>
-          <button class="button" onclick="window.location.href='signUp.html'">Register</button>
+          <button class="button" onclick="window.location.href='login.php'">Login</button>
+          <button class="button" onclick="window.location.href='signUp.php'">Register</button>
         </div>
       </div>
     </div>
@@ -168,8 +168,8 @@
         <h1 style="background-color: rgba(54, 137, 131, 0.5);"><strong>Feeling Sick?</strong></h1>
         <p style="background-color: rgba(54, 137, 131, 0.5);">Join us to experience fast and right medical cares</p>
         <div class="button-container">
-          <button class="button" onclick="window.location.href='login.html'">Login</button>
-          <button class="button" onclick="window.location.href='signUp.html'">Register</button>
+          <button class="button" onclick="window.location.href='login.php'">Login</button>
+          <button class="button" onclick="window.location.href='signUp.php'">Register</button>
         </div>
       </div>
     </div>
@@ -184,8 +184,8 @@
         <h1 style="background-color: rgba(54, 137, 131, 0.5);"><strong>Your Health is Our Priority!</strong></h1>
         <p style="background-color: rgba(54, 137, 131, 0.5);">Just talk to Us and gain health.</p>
         <div class="button-container">
-          <button class="button" onclick="window.location.href='login.html'">Login</button>
-          <button class="button" onclick="window.location.href='signUp.html'">Register</button>
+          <button class="button" onclick="window.location.href='login.php'">Login</button>
+          <button class="button" onclick="window.location.href='signUp.php'">Register</button>
         </div>
       </div>
     </div>
@@ -200,8 +200,8 @@
         <h1 style="background-color: rgba(54, 137, 131, 0.5);"><strong>You are on the Right platform!</strong></h1>
         <p style="background-color: rgba(54, 137, 131, 0.5);">Allow us to take care of your health.</p>
         <div class="button-container">
-          <button class="button" onclick="window.location.href='login.html'">Login</button>
-          <button class="button" onclick="window.location.href='signUp.html'">Register</button>
+          <button class="button" onclick="window.location.href='login.php'">Login</button>
+          <button class="button" onclick="window.location.href='signUp.php'">Register</button>
         </div>
       </div>
     </div>
@@ -216,8 +216,8 @@
         <h1 style="background-color: rgba(54, 137, 131, 0.5);"><strong>Unleash Your Creativity</strong></h1>
         <p style="background-color: rgba(54, 137, 131, 0.5);">Join our creative community and unleash your full potential.</p>
         <div class="button-container">
-          <button class="button" onclick="window.location.href='login.html'">Login</button>
-          <button class="button" onclick="window.location.href='signUp.html'">Register</button>
+          <button class="button" onclick="window.location.href='login.php'">Login</button>
+          <button class="button" onclick="window.location.href='signUp.php'">Register</button>
         </div>
       </div>
     </div>

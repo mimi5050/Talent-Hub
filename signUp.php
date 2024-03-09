@@ -125,7 +125,7 @@
         <button type="submit">Register</button>
       </div>
     </form>
-     <p style="text-align: center; background-color: rgba(54, 137, 131, 0.5);">Already have an account? <a href="login.html">Login here</a></p> <!-- Login Link -->
+     <p style="text-align: center; background-color: rgba(54, 137, 131, 0.5);">Already have an account? <a href="login.php">Login here</a></p> <!-- Login Link -->
   </div>
 </body>
 

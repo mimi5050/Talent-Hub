@@ -177,11 +177,11 @@
     <div class="container">
         <img class="logo" src="Images/Logo.png" alt="Logo">
         <div class="navigation">
-          <a href="Index.html"> Home</a>
-          <a href="AboutUs.html">About Us</a>
-          <a href="ourservices.html">Our Services</a>
-          <a href="Blog&News.html">Blog & News</a>
-          <a href="contactUs.html">Contact Us</a>
+          <a href="Index.php"> Home</a>
+          <a href="AboutUs.php">About Us</a>
+          <a href="ourservices.php">Our Services</a>
+          <a href="Blog&News.php">Blog & News</a>
+          <a href="contactUs.php">Contact Us</a>
     </div>
   </header>
 
