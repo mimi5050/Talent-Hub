@@ -7,7 +7,7 @@
   <title>Sign Up Page</title>
   <style>
     body {
-      background-image: url('Images/backgroundRegister.jpg');
+      background-image: url('backgroundRegister.jpg');
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;
@@ -17,22 +17,22 @@
     }
 
     .signup-container {
-      max-width: 400px;
+      max-width: 600px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 50px;
       background-color: white;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(13, 69, 47, 0.5);
+      box-shadow: 0 0 50px rgba(13, 69, 47, 0.5);
       margin-top: 50px;
     }
 
     .signup-container h2 {
       color: #0d452f;
-      margin: 20px;
+      margin: 30px;
     }
 
     .form-group {
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
     .form-group label {
@@ -53,7 +53,8 @@
 
     .form-group button {
       width: 100%;
-      padding: 10px;
+      padding: 15px;
+      font-size: 17px;
       border: none;
       border-radius: 5px;
       background-color: #0d452f;
@@ -67,7 +68,7 @@
   <div class="signup-container">
     <h2 style="text-align:center; background-color: rgba(54, 137, 131, 0.5);">Sign Up</h2>
     <!-- Sign Up Form -->
-    <form action="your_action_url" method="post" name="signupForm" id="signupForm">
+    <form action="signupbackend.php" method="post" name="signupForm" id="signupForm">
       <!-- First Name Input -->
       <div class="form-group">
         <label for="firstName">First Name:</label>
@@ -77,6 +78,10 @@
       <div class="form-group">
         <label for="lastName">Last Name:</label>
         <input type="text" id="lastName" name="lastName" pattern="[A-Za-z]+" title="Only letters allowed" placeholder="Enter your last name" required>
+      </div>
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" pattern="[a-zA-Z0-9]+" title="Only letters and numbers allowed" placeholder="Enter your username" required>
       </div>
       <!-- Gender Selection -->
       <div class="form-group">
@@ -93,6 +98,7 @@
           <option value="0" disabled>Select</option>
           <option value="1">Single</option>
           <option value="2">Married</option>
+          <option value="3">Other</option>
         </select>
       </div>
       <!-- Birthdate Input -->
@@ -104,6 +110,14 @@
       <div class="form-group">
         <label for="phoneNumber">Phone Number:</label>
         <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" title="10 digits allowed" placeholder="Enter your phone number" required>
+      </div>
+      <div class="form-group">
+        <label for="UserType">Status</label>
+        <select id="UserType" name="UserType" required>
+          <option value="admin">An administrator</option>
+          <option value="regular">A healthworker </option>
+          <option value="regular">A patient </option>
+        </select>
       </div>
       <!-- Email Input -->
       <div class="form-group">
