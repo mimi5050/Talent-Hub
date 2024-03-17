@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - Natembea Online</title>
   <style>
-    /* Global Styles */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -30,6 +29,7 @@
       justify-content: space-between;
       padding: 0 20px;
       z-index: 1000;
+    
     }
     
     .logo {
@@ -49,7 +49,7 @@
     .navigation a {
       color:#0d452f;;
       text-decoration: none;
-      margin-right: 30px; /* Adjusted margin */
+      margin-right: 30px; 
       font-size: 18px;
       font-weight: bold;
     }
@@ -58,15 +58,15 @@
       position: relative;
       height: 100vh;
       overflow: hidden;
-      margin-top: 80px; /* Adjust for header height */
+      margin-top: 80px; 
     }
 
-    /* Header Styles */
+  
     header {
-      background-color: #dedab6;
       color:  #0d452f;
       padding: 20px 0;
       text-align: center;
+      background-color:white;
     }
 
     h1 {
@@ -80,7 +80,7 @@
       margin-bottom: 20px;
     }
 
-    /* About Section Styles */
+  
     .about-section {
       background-color: #fff;
       padding: 50px 0;
@@ -89,7 +89,10 @@
     .about-section h2 {
       font-size: 30px;
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
+      margin-top:-60px;
+      background-color:#0d452f;
+      color:#dedab6;
     }
 
     .about-content {
@@ -115,7 +118,7 @@
       padding: 0 20px;
     }
 
-    /* Team Section Styles */
+
     .team-section {
       background-color: #dedab6;
       padding: 50px 0;
@@ -160,7 +163,7 @@
       line-height: 1.6;
     }
 
-    /* Footer Styles */
+  
     footer {
       background-color: #0d452f;
       color: #fff;

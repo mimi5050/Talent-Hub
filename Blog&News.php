@@ -1,3 +1,25 @@
+<?php
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "natembea_online";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Retrieve blog posts from the database
+$sql = "SELECT Title, Content, DoctorName, PublishDate FROM newsandblog";
+$result = $conn->query($sql);
+
+// Close the PHP tag to output HTML
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,9 +31,9 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      overflow: hidden;
-      background-color:#dedab6;
+      margin-top: 20px;
+      background-color: #dedab6;
+      
     }
 
     .header {
@@ -22,7 +44,6 @@
       height: 100px;
       background-color: White;
       display: flex;
-      align-items: center;
       justify-content: space-between;
       padding: 0 20px;
       z-index: 1000;
@@ -49,8 +70,7 @@
     }
 
     .blog-container {
-      margin-top: 100px;
-      text-align: center;
+      margin-top: 150px;
     }
 
     .blog-post {
@@ -61,12 +81,14 @@
 
     .blog-post h2 {
       color: #0d452f;
+      margin-top: 20px;
     }
 
     .blog-post p {
       color: #333;
-      margin-top: 10px;
-      text-align: left;
+      margin-top: 20px;
+      text-align: justify;
+
     }
 
     .blog-post .author {
@@ -96,29 +118,32 @@
       <a href="Index.php"> Home</a>
       <a href="AboutUs.php">About Us</a>
       <a href="ourservices.php">Our Services</a>
-      <a href="contactUs.php">Contact Us</a>
       <a href="Blog&News.php">Blog & News</a>
+      <a href="contactUs.php">Contact Us</a>
     </div>
   </div>
 
   <div class="blog-container">
-    <div class="blog-post">
-      <h2>Latest Health News: Study Reveals Benefits of Daily Exercise</h2>
-      <p>A recent study published in the Journal of Health Sciences found that individuals who engage in daily exercise experience significant improvements in cardiovascular health...</p>
-      <p class="author">By John Doe</p>
-      <p class="date">Published on February 12, 2024</p>
-      <p class="category">Category: Health & Fitness</p>
-    </div>
-
-    <div class="blog-post">
-      <h2>New Breakthrough in Biotechnology: CRISPR Gene Editing Shows Promise in Treating Genetic Diseases</h2>
-      <p>Scientists have made a groundbreaking discovery in the field of biotechnology with the development of CRISPR gene editing technology...</p>
-      <p class="author">By Jane Smith</p>
-      <p class="date">Published on February 10, 2024</p>
-      <p class="category">Category: Biotechnology</p>
-    </div>
-
+    <?php
+    // Loop through each row of the result set
+    while ($row = $result->fetch_assoc()) {
+    ?>
+      <div class="blog-post">
+        <h2><?php echo $row['Title']; ?></h2>
+        <p><?php echo $row['Content']; ?></p>
+        <p class="author">By <?php echo $row['DoctorName']; ?></p>
+        <p class="date">Published on <?php echo $row['PublishDate']; ?></p>
+      </div>
+    <?php
+    }
+    ?>
   </div>
 </body>
 
 </html>
+
+<?php
+// Close result set and connection
+$result->close();
+$conn->close();
+?>

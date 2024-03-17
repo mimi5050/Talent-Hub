@@ -41,7 +41,7 @@
     .navigation a {
       color:#0d452f;;
       text-decoration: none;
-      margin-right: 30px; /* Adjusted margin */
+      margin-right: 30px; 
       font-size: 18px;
       font-weight: bold;
     }
@@ -50,7 +50,7 @@
       position: relative;
       height: 100vh;
       overflow: hidden;
-      margin-top: 80px; /* Adjust for header height */
+      margin-top: 80px; 
     }
 
     .slide {
@@ -135,8 +135,8 @@
       <a href="Index.php"> Home</a>
       <a href="AboutUs.php">About Us</a>
       <a href="ourservices.php">Our Services</a>
+      <a href="Blog&News.php">Blog & News</a>
       <a href="contactUs.php">Contact Us</a>
-      <a href="BlogNews.php">Blog & News</a>
     </div>
   </div>
 

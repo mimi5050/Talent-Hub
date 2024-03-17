@@ -80,8 +80,11 @@
 
     .container {
       display: flex;
+      width:85%;
       flex-direction: column;
       height: 100vh;
+      margin-left:150px;
+      margin-right:0;
     }
 
     .topnav {
@@ -102,7 +105,12 @@
       margin: 0;
       font-weight: bolder;
       font-size: large;
+      margin-left: 100px;
     }
+    .topnav-centered {
+        margin-top: -80px; 
+    }
+
 
     .sidenav.topnav-centered a {
       float: none;
@@ -121,6 +129,8 @@
       padding: 20px 20px;
     }
 
+
+
     .welcome {
       width: 100%;
     }
@@ -137,16 +147,17 @@
     }
 
     .intro {
-      padding: 100px;
+      padding: 40px;
       text-align: left;
       background: #0d452f;
       color: white;
       font-size: 30px;
       margin-bottom: 40px;
       border-radius: 40px;
-      width: 100%;
-      height: 50px;
-      padding-top: 30px;
+      margin-left:60px;
+      width: 100%; /* Adjusted width */
+      height:15%;
+      margin: 0 auto; /* Center the container horizontally */
     }
 
     .intro h1 {
@@ -182,7 +193,7 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       padding: 30px;
       margin-bottom: 20px;
-      width: 43%;
+      width: 40%;
       display: block;
       height: 48%;
       display: flex;
@@ -207,7 +218,7 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       padding: 30px;
       margin-bottom: 20px;
-      width: 43%;
+      width: 40%;
       display: block;
       height: 48%;
       justify-content: space-between;
@@ -226,7 +237,7 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       padding: 20px;
       margin-bottom: 20px;
-      width: 40%;
+      width: 30%;
     }
 
     .card h3 {
@@ -266,7 +277,7 @@
     }
     .sidenav {
         height: 100%;
-        width: 160px;
+        width: 23%;
         position: fixed;
         z-index: 1;
         top: 0;
@@ -275,20 +286,26 @@
         overflow-x: hidden;
         padding-top: 80px;
         padding-left: 10px;
+        margin-top: 0;
       }
+
+
 
       .sidenav a {
         padding: 20px 8px 6px 16px;
         text-decoration: none;
-        font-size: 15px;
+        font-size: 18px;
         color: #818181;
         display: block;
+        margin-bottom:25px;
+
       }
 
       .sidenav a:hover {
-        color: #0d452f;
-        border-radius: 4px;
-        background-color: #dedab6;
+        color:  #dedab6;  
+        background-color:#0d452f; 
+        border-radius: 10px; 
+        padding: 12px 20px; 
       }
 
       .main {
@@ -335,18 +352,16 @@
 
         <div class="sidenav">
             <div class="topnav-centered">
-                <a href="User_dashboard.html" class="title"><img src="Images/logo.jpg" alt="Logo" style="height: 40px;"></a>
-
+            <img src="Images/logo.jpg" alt="Logo" style="height: 80px; margin-bottom:20px; margin-top:0;">
         </div>
           <a class="active" href="#"><i class="fas fa-home"></i> Overview</a>
-          <li><a href="#"><i class="fas fa-calendar-alt"></i> Appointments</a></li>
-          <li><a href="#"><i class="fas fa-envelope"></i> Message</a></li>
-          <li><a href="#"><i class="fas fa-chart-bar"></i> Report</a></li>
-          <li><a href="#"><i class="fas fa-file-invoice-dollar"></i> Insurance</a></li>
-          <li><a href="#"><i class="fas fa-book-medical"></i> Health Education and News</a></li>
-          <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
-          <li><a href="#"><i class="fas fa-phone"></i> Emergency Contact Information</a></li>
-          <li><a href="#"><i class="fas fa-comments"></i> Feedback and Support</a></li>
+          <li><a href="bookappointment.php"><i class="fas fa-calendar-alt"></i> Appointments</a></li>
+          <li><a href="Insurance.php"><i class="fas fa-file-invoice-dollar"></i> Insurance</a></li>
+          <li><a href="Emergency_Contact_Information.php"><i class="fas fa-phone"></i> Emergency Contact Information</a></li>
+          <li><a href="Feedbacksupport.php"><i class="fas fa-comments"></i> Feedback and Support</a></li>
+          <li><a href="profilepatient.php"><i class="fas fa-user-edit"></i> Edit my profile</a></li>
+          <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+
         </div>
 
     <div class="dashboard">
@@ -360,7 +375,7 @@
             <img src="Images/doctors.png" width = 30%/>
             <h1>Need healthcare?</h1>
             <p>Book an appointment with a health personnel for simplified medical services.</p>
-            <button onclick="document.location='#'" >Appointments</button>
+            <button onclick="document.location='bookappointment.php'" >Appointments</button>
             
         </div>
 
@@ -423,7 +438,7 @@
           </tbody>
         </table>
       </div>
-      <!-- Add other dashboard elements here -->
+      
     </div>
   </div>
 </body>

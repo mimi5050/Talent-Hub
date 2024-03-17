@@ -4,18 +4,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Services - Natembea Online</title>
   <style>
-    /* Global Styles */
+  
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f8f8f8;
+     
     }
 
     .container {
-      max-width: 1200px;
       margin: 0 auto;
       padding: 20px;
+      margin-top:-10px;
     }
 
     header {
@@ -43,7 +44,7 @@
       display: flex;
       align-items: center;
       margin-left: 600px;
-      margin-top: -50px;
+      margin-top: -70px;
     }
 
     .navigation a {
@@ -53,6 +54,10 @@
       font-size: 18px;
       font-weight: bold;
       margin-top: 50px;
+    }
+
+    h1{
+      text-align:center;
     }
 
     h1, h2, h3 {
@@ -66,7 +71,6 @@
       margin-bottom: 15px;
     }
 
-    /* Service Category Styles */
     .service-category {
       background-color: #fff;
       padding: 50px 0;
@@ -125,7 +129,6 @@
       font-style: italic;
     }
 
-    /* CTA Section Styles */
     .cta-section {
       background-color: #0d452f;
       color: #fff;
@@ -156,19 +159,19 @@
 <header>
   <div class="container">
       <img class="logo" src="Images/Logo.png" alt="Logo">
-      <div class="navigation">
-        <a href="Index.html"> Home</a>
-        <a href="AboutUs.html">About Us</a>
-        <a href="ourservices.html">Our Services</a>
-        <a href="Blog&News.html">Blog & News</a>
-        <a href="contactUs.html">Contact Us</a>
+      <div class="navigation" style="margin-top:-80px;">
+        <a href="Index.php"> Home</a>
+        <a href="AboutUs.php">About Us</a>
+        <a href="ourservices.php">Our Services</a>
+        <a href="Blog&News.php">Blog & News</a>
+        <a href="contactUs.php">Contact Us</a>
   </div>
 </header>
 
 <body>
   <div class="container">
     <div class="service-category">
-      <h1>Our Services</h1>
+      <h1 style="background-color:#0d452f; color:#dedab6;">Our Services</h1>
       <div class="service-list">
         <div class="service-item">
           <img src="Images/bookapp.png" alt="Book Consultation Online">
@@ -210,7 +213,7 @@
     <div class="cta-section">
       <h2>Ready to Experience Our Services?</h2>
       <p>Take the first step towards better health today.</p>
-      <button class="cta-btn">Contact Us</button>
+      <a href="contactUs.php" class="cta-btn">Contact Us</a>
     </div>
   </div>
 </body>

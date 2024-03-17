@@ -144,32 +144,5 @@
       </div>
     </div>
   </div>
-
-<script>
-  // JavaScript or jQuery code to handle form submission
-  $(document).ready(function() {
-    $('#contactForm').submit(function(event) {
-      event.preventDefault(); // Prevent default form submission
-
-      $.ajax({
-        type: 'POST',
-        url: 'contact.php',
-        data: $(this).serialize(),
-        dataType: 'json',
-        success: function(response) {
-          // Display status message
-          $('#statusMessage').text(response.message);
-        },
-        error: function() {
-          // Display error message if AJAX request fails
-          $('#statusMessage').text('Oops! Something went wrong. Please try again later.');
-        }
-      });
-    });
-  });
-</script>
-
-<div id="statusMessage"></div>
-
 </body>
 </html>
