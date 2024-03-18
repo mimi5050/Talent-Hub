@@ -1,25 +1,6 @@
 <?php
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "natembea_online";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Retrieve blog posts from the database
-$sql = "SELECT Title, Content, DoctorName, PublishDate FROM newsandblog";
-$result = $conn->query($sql);
-
-// Close the PHP tag to output HTML
+include "connection.php"
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
