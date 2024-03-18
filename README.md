@@ -4,18 +4,22 @@ Natembea Online is a web application that provides medical appointment schedulin
 **Functionalities**
 
 **User Registration and Authentication**
-Users can register and create an account on the Natembea Online platform.
+
+Users can register and create an account on the Natembea Online platform. 
 Users can log in to their account to access medical appointment scheduling and healthcare services.
 
 **Appointment Scheduling**
+
 Users can book appointments for various types of consultations, including in-person and virtual consultations.
 Users can specify the date and time of their appointments.
 
 **Medical Records**
+
 Natembea Online ensures the confidential and secure storage of patient data, including medical histories and treatment plans.
 Patients can access their medical records and treatment plans through their Natembea Online account.
 
 **Healthcare Services**
+
 Natembea Online offers video or audio virtual consultations between patients and healthcare professionals for effective communication and consultation, regardless of geographic location.
 Users can access health news, blogs, and feedback through the Natembea Online platform.
 
@@ -23,6 +27,7 @@ Users can access health news, blogs, and feedback through the Natembea Online pl
 
 **-Patient Dashboard**
 Patients can access their personalized dashboard to view their appointment schedule, medical records, and healthcare services.
+
 **-Doctor Dashboard**
 Healthcare professionals can access their dashboard to manage their appointments, patient data, and healthcare services.
 
