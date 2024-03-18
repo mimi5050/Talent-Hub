@@ -2,7 +2,7 @@
 // Database connection parameters
 $servername = "127.0.0.1";
 $username = "root";
-$dbname = "natembea_online";
+$dbname = "onlinenatembea";
 $password = "cs341webtech";
 
 // Create connection
