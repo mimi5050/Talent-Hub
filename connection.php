@@ -1,6 +1,6 @@
 <?php
 // Database connection parameters
-$servername = "localhost";
+$servername = "127.0.0.1";
 $username = "root";
 $dbname = "natembea_online";
 $password = "cs341webtech";
