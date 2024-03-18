@@ -103,97 +103,107 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             border-radius: 5px;
             background-color: white;
             color: black;
-        }        
-    .form-group button {
-      width: 100%;
-      padding: 15px;
-      font-size: 17px;
-      border: none;
-      border-radius: 5px;
-      background-color: #0d452f;
-      color: white;
-      cursor: pointer;
-    }
-  </style>
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #0d452f;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Error message style */
+        .error-message {
+            color: red;
+            margin-top: 5px;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-  <div class="signup-container">
-    <h2 style="text-align:center; background-color: rgba(54, 137, 131, 0.5);">Sign Up</h2>
-    <!-- Sign Up Form -->
-    <form action="signupbackend.php" method="post" name="signupForm" id="signupForm">
-      <!-- First Name Input -->
-      <div class="form-group">
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" pattern="[A-Za-z]+" title="Only letters allowed" placeholder="Enter your first name" required>
-      </div>
-      <!-- Last Name Input -->
-      <div class="form-group">
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" pattern="[A-Za-z]+" title="Only letters allowed" placeholder="Enter your last name" required>
-      </div>
-      <div class="form-group">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" pattern="[a-zA-Z0-9]+" title="Only letters and numbers allowed" placeholder="Enter your username" required>
-      </div>
-      <!-- Gender Selection -->
-      <div class="form-group">
-        <label>Gender:</label>
-        <input type="radio" id="male" name="gender" value="0" checked>
-        <label for="male">Male</label>
-        <input type="radio" id="female" name="gender" value="1">
-        <label for="female">Female</label>
-      </div>
-      <!-- Marital Status Selection -->
-      <div class="form-group">
-        <label for="familyRole">Marital Status:</label>
-        <select id="familyRole" name="familyRole" required>
-          <option value="0" disabled>Select</option>
-          <option value="1">Single</option>
-          <option value="2">Married</option>
-          <option value="3">Other</option>
-        </select>
-      </div>
-      <!-- Birthdate Input -->
-      <div class="form-group">
-        <label for="birthdate">Birthdate:</label>
-        <input type="date" id="birthdate" name="birthdate" required>
-      </div>
-      <!-- Phone Number Input -->
-      <div class="form-group">
-        <label for="phoneNumber">Phone Number:</label>
-        <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" title="10 digits allowed" placeholder="Enter your phone number" required>
-      </div>
-      <div class="form-group">
-        <label for="UserType">Status</label>
-        <select id="UserType" name="UserType" required>
-          <option value="admin">An administrator</option>
-          <option value="regular">A healthworker </option>
-          <option value="regular">A patient </option>
-        </select>
-      </div>
-      <!-- Email Input -->
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-      </div>
-      <!-- Password Input -->
-      <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" pattern="^(?=.*\d)(?=.*[a-zA-Z]).{8,}$" title="Minimum 8 characters, at least one letter and one digit" placeholder="Enter your password" required>
-      </div>
-      <!-- Confirm Password Input -->
-      <div class="form-group">
-        <label for="confirmPassword">Confirm Password:</label>
-        <input type="password" id="confirmPassword" name="confirmPassword" pattern="^(?=.*\d)(?=.*[a-zA-Z]).{8,}$" title="Minimum 8 characters, at least one letter and one digit" placeholder="Confirm your password" required>
-      </div>
-      <!-- Submit Button -->
-      <div class="form-group">
-        <button type="submit">Register</button>
-      </div>
-    </form>
-     <p style="text-align: center; background-color: rgba(54, 137, 131, 0.5);">Already have an account? <a href="login.php">Login here</a></p> <!-- Login Link -->
-  </div>
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <!-- Display error message if passwords don't match -->
+        <?php if (!empty($errorMsg)) : ?>
+            <p class="error-message"><?php echo $errorMsg; ?></p>
+        <?php endif; ?>
+        <!-- Sign Up Form -->
+        <form action="signUp.php" method="post" name="signupForm" id="signupForm">
+            <!-- Name Input -->
+            <div class="form-group">
+                <label for="Username">Full Name:</label>
+                <input type="text" id="Username" name="Username" pattern="[A-Za-z ]+" title="Only letters allowed"
+                    placeholder="Enter your full name" required>
+            </div>
+            <!-- Gender Selection -->
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+
+            <!-- Marital Status Selection -->
+            <div class="form-group">
+                <label for="maritalStatus">Marital Status:</label>
+                <select id="maritalStatus" name="maritalStatus" required>
+                    <option value="Single">Single</option>
+                    <option value="Married">Married</option>
+                </select>
+            </div>
+            <!-- Birthdate Input -->
+            <div class="form-group">
+                <label for="birthdate">Birthdate:</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+            </div>
+            <!-- Phone Number Input -->
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" title="10 digits allowed"
+                    placeholder="Enter your phone number" required>
+            </div>
+            <!-- Email Input -->
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <!-- Password Input -->
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password"
+                    pattern="^(?=.*\d)(?=.*[a-zA-Z]).{8,}$" title="Minimum 8 characters, at least one letter and one digit"
+                    placeholder="Enter your password" required>
+            </div>
+            <!-- Confirm Password Input -->
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword"
+                    pattern="^(?=.*\d)(?=.*[a-zA-Z]).{8,}$" title="Minimum 8 characters, at least one letter and one digit"
+                    placeholder="Confirm your password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="UserType"> User Type</label>
+                <select id="UserType" name="UserType" required>
+                    <option value="doctor">A doctor</option>
+                    <option value="patient">A patient</option>
+                </select>
+            </div>
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+        <p style="text-align: center; background-color: rgba(54, 137, 131, 0.5);">Already have an account? <a
+                href="login.php">Login here</a></p> <!-- Login Link -->
+    </div>
+  
 </body>
 
 </html>
