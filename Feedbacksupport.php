@@ -127,7 +127,7 @@
         <li><a href="Insurance.php"><i class="fas fa-file-invoice-dollar icon"></i> Insurance</a></li>
         <li><a href="Emergency_Contact_Information.php"><i class="fas fa-phone icon"></i> Emergency Contact Information</a></li>
         <li><a href="Feedbacksupport.php"><i class="fas fa-comments icon"></i> Feedback and Support</a></li>
-        <li><a href="profilepatient .php"><i class="fas fa-user-edit"></i> Edit my profile</a></li>
+        <li><a href="profilepatient.php"><i class="fas fa-user-edit"></i> Edit my profile</a></li>
         <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
 
     </ul>
