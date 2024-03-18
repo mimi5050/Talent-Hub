@@ -3,10 +3,10 @@
 $servername = "localhost";
 $username = "root";
 $dbname = "natembea_online";
-
+$password = "cs341webtech";
 
 // Create connection
-$conn = new mysqli($servername, $username, "", $dbname);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
