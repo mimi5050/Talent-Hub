@@ -139,7 +139,7 @@
     <h1>Patients to Attend</h1>
     <ul class="nav-links">
         <li><a href="doctor_dashboard.php"><i class="fas fa-home"></i> Overview</a></li>
-        <li><a href="manage_appointments.php"><i class="fas fa-calendar-alt"></i> Manage Appointments</a></li>
+        <li><a href="Manage_appointments.php"><i class="fas fa-calendar-alt"></i> Manage Appointments</a></li>
         <li><a class="active" href="Patient_Records.php"><i class="fas fa-folder-open"></i> Manage Patient Records</a></li>
         <li><a href="Patients_to_attend.php"><i class="fas fa-user-md"></i> Patients to Attend</a></li>
         <li><a href="user_feedback.php"><i class="fas fa-comment-dots"></i> User Feedback</a></li>

@@ -144,7 +144,7 @@ include 'connection.php';
 </div>
 <div id="sidenav">
     <a href="doctor_dashboard.php"><i class="fas fa-home"></i> Overview</a>
-    <a href="manage_appointments.php"><i class="fas fa-calendar-alt"></i> Manage Appointments</a>
+    <a href="Manage_appointments.php"><i class="fas fa-calendar-alt"></i> Manage Appointments</a>
     <a class="active" href="Patient_Records.php"><i class="fas fa-folder-open"></i> Manage Patient Records</a>
     <a href="Patients_to_attend.php"><i class="fas fa-user-md"></i> Patients to Attend</a>
     <a href="user_feedback.php"><i class="fas fa-comment-dots"></i>User Feedback</a>
