@@ -49,7 +49,7 @@
     <div class="container">
         <h2>Message Received Successfully!</h2>
         <p class="message">Thank you for reaching out to us. We have received your message and will get back to you soon.</p>
-        <a href="index.php" class="button">Back to Home</a>
+        <a href="Index.php" class="button">Back to Home</a>
     </div>
 </body>
 
