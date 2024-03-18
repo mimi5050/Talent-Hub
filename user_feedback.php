@@ -127,7 +127,7 @@
       <img src="Images/logo.jpg" alt="Logo" style="height: 80px; margin-bottom:20px; margin-top:0;">
     </div>
     <a href="doctor_dashboard.php"><i class="fas fa-home"></i> Overview</a>
-    <a href="manage_appointments.php"><i class="fas fa-calendar-alt"></i> Manage Appointments</a>
+    <a href="Manage_appointments.php"><i class="fas fa-calendar-alt"></i> Manage Appointments</a>
     <a href="Patient_Records.php"><i class="fas fa-folder-open"></i>Manage Patient Records</a>
     <a href="Patients_to_attend.php"><i class="fas fa-user-md"></i> Patients to attend</a>
     <a class="active" href="user_feedback.php"><i class="fas fa-comment-dots"></i> User Feedback</a>
