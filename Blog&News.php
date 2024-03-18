@@ -1,6 +1,7 @@
 <?php
-include "connection.php"
+include "connection.php";
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -106,6 +107,9 @@ include "connection.php"
 
   <div class="blog-container">
     <?php
+
+      $sql = "SELECT Title, Content, DoctorName, PublishDate FROM newsandblog";
+      $result = $conn->query($sql);
     // Loop through each row of the result set
     while ($row = $result->fetch_assoc()) {
     ?>

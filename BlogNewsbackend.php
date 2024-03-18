@@ -1,5 +1,5 @@
 <?php
-include("connection.php"); // Include database connection file
+include("connection.php"); 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve form data
