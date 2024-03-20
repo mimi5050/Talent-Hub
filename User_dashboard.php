@@ -155,9 +155,9 @@
       margin-bottom: 40px;
       border-radius: 40px;
       margin-left:60px;
-      width: 100%; /* Adjusted width */
+      width: 100%; 
       height:15%;
-      margin: 0 auto; /* Center the container horizontally */
+      margin: 0 auto; 
     }
 
     .intro h1 {
@@ -297,7 +297,7 @@
         font-size: 18px;
         color: #818181;
         display: block;
-        margin-bottom:20px;
+        margin-bottom:15px;
 
       }
 
