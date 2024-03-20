@@ -297,7 +297,7 @@
         font-size: 18px;
         color: #818181;
         display: block;
-        margin-bottom:25px;
+        margin-bottom:20px;
 
       }
 

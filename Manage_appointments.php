@@ -58,7 +58,7 @@ session_start();
       color: #0d452f;
       display: block;
       transition: 0.3s;
-      margin-bottom:18px;
+      margin-bottom:15px;
     }
 
     .sidenav a:hover {

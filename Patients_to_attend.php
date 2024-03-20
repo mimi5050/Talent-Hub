@@ -68,7 +68,7 @@
             margin-bottom:10px;
         }
         .nav-links li {
-            margin-bottom: 40px;
+            margin-bottom: 25px;
             background-color: #dedab6;
         }
         .nav-links a i {

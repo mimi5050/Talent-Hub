@@ -8,7 +8,7 @@ include 'connection.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuickShop - Customer</title>
+    <title>My profile-Natembea Online</title>
     <script src="https://kit.fontawesome.com/a3c696c988.js" crossorigin="anonymous"></script>
     <!-- CSS code-->
     <style>
@@ -46,7 +46,7 @@ include 'connection.php';
             font-size: 18px;
             color: #0d452f;
             display: block;
-            margin-bottom:20px;
+            margin-bottom:15px;
         }
 
         #sidenav a:hover {
@@ -54,7 +54,6 @@ include 'connection.php';
             color: white;
         }
 
-        /* profile section styling */
         #ProfileViewing {
             margin-top: 3%;
         }

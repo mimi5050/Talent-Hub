@@ -46,7 +46,7 @@ include 'connection.php';
             font-size: 18px;
             color: #0d452f;
             display: block;
-            margin-bottom:30px;
+            margin-bottom:20px;
         }
 
         #sidenav a:hover {

@@ -115,7 +115,7 @@ session_start();
         }
 
         .nav-links li {
-            margin-bottom: 50px;
+            margin-bottom: 30px;
             background-color: #dedab6;
         }
 
