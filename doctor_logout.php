@@ -60,7 +60,7 @@
 
 <div class="container">
   <h1>Are you sure you want to logout?</h1>
-  <form action="index.php" method="post">
+  <form action="Index.php" method="post">
     <button type="submit" class="logout-btn"><i class="fas fa-sign-out-alt icon"></i>Logout</button>
   </form>
   <a href="doctor_dashboard.php" class="back-link"><i class="fas fa-arrow-left icon"></i>Back to Dashboard</a>

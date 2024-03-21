@@ -377,8 +377,8 @@
 
         <div class="intro">
             <img src="Images/patients.png" alt="Patients" width="40%" style="border-radius: 20px; margin-bottom: 100 px;">
-            <h1>Need healthcare?</h1>
-            <p>Book an appointment with a health personnel for simplified medical services.</p>
+            <h1>Read to Save Lives?</h1>
+            <p>Manage appointments with Natembea Online.Check out for the patients you need to take care of!</p>
             <button onclick="document.location='manage_appointments.php'" >Manage Appointments</button>
             
         </div>
