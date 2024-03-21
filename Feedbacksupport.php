@@ -144,6 +144,8 @@
             <input type="text" id="subject" name="subject" required>
             <label for="message">Your Message:</label>
             <textarea id="message" name="message" required></textarea>
+            <input type="hidden" name="created_at" value="<?php echo date('Y-m-d H:i:s'); ?>">
+
             <input type="submit" value="Submit">
         </form>
     </div>

@@ -1,3 +1,4 @@
+<?php
 // Include the database connection file
 include "connection.php";
 
@@ -8,11 +9,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $message = mysqli_real_escape_string($conn, $_POST['message']);
 
-    // Get the current timestamp
-    $created_at = date("Y-m-d H:i:s");
-
-    // Insert query with the created_at column
-    $sql = "INSERT INTO contactus (Name, Email, Message, created_at) VALUES ('$name', '$email', '$message', '$created_at')";
+    // Insert query
+    $sql = "INSERT INTO contactus (Name, Email, Message) VALUES ('$name', '$email', '$message')";
 
     // Execute the query
     if (mysqli_query($conn, $sql)) {
@@ -27,3 +25,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // Close the database connection
 mysqli_close($conn);
+?>
