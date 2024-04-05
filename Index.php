@@ -26,7 +26,7 @@
       z-index: 1000;
     }
 
-       .logo {
+    .logo {
       width: 150px;
       height: auto;
       margin-right: 5px;
@@ -35,13 +35,13 @@
     .navigation {
       display: flex;
       align-items: center;
-      margin-right: 5px;
+      margin-right: 40px;
     }
 
     .navigation a {
-      color:#0d452f;;
+      color: #07bca3; 
       text-decoration: none;
-      margin-right: 30px; 
+      margin-right: 30px;
       font-size: 18px;
       font-weight: bold;
     }
@@ -50,7 +50,7 @@
       position: relative;
       height: 100vh;
       overflow: hidden;
-      margin-top: 80px; 
+      margin-top: 80px;
     }
 
     .slide {
@@ -92,7 +92,7 @@
       transform: translateY(-50%);
       font-size: 100px;
       cursor: pointer;
-      color: #368983;
+      color: #07bca3; 
       background: none;
       border: none;
     }
@@ -117,7 +117,7 @@
 
     .button {
       padding: 10px 20px;
-      background-color: #0d452f;
+      background-color: #07bca3; 
       color: #fff;
       border: none;
       border-radius: 5px;
@@ -130,12 +130,11 @@
 
 <body>
   <div class="header">
-    <img class="logo" src="Images/logo.jpg" alt="Logo">
+    <img class="logo" src="Images/logo.png" alt="Logo">
     <div class="navigation">
       <a href="Index.php"> Home</a>
       <a href="AboutUs.php">About Us</a>
       <a href="ourservices.php">Our Services</a>
-      <a href="Blog&News.php">Blog & News</a>
       <a href="contactUs.php">Contact Us</a>
     </div>
   </div>
@@ -144,29 +143,12 @@
     <div class="slide active">
       <div class="video-container">
         <video class="video" autoplay loop muted>
-          <source src="Images/slide1.mp4" type="video/mp4">
+          <source src="Images\slide1.mp4" type="video/mp4">
         </video>
       </div>
       <div class="content">
-        <h1 style="background-color: rgba(54, 137, 131, 0.5);"><strong>Welcome to Natembea Online</strong></h1>
-        <p style="background-color: rgba(54, 137, 131, 0.5);">Explore the amazing medical services we offer.</p>
-        <div class="button-container">
-          <button class="button" onclick="window.location.href='login.php'">Login</button>
-          <button class="button" onclick="window.location.href='signUp.php'">Register</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Add other slides here -->
-    <div class="slide">
-      <div class="video-container">
-        <video class="video" autoplay loop muted>
-          <source src="Images/slide1.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="content">
-        <h1 style="background-color: rgba(54, 137, 131, 0.5);"><strong>Feeling Sick?</strong></h1>
-        <p style="background-color: rgba(54, 137, 131, 0.5);">Join us to experience fast and right medical cares</p>
+        <h1 style="background-color: rgba(54, 137, 131, 0.5);"><strong>Welcome to TalentHub</strong></h1>
+        <p style="background-color: rgba(54, 137, 131, 0.5);">Explore the amazing support and  Services we offer.</p>
         <div class="button-container">
           <button class="button" onclick="window.location.href='login.php'">Login</button>
           <button class="button" onclick="window.location.href='signUp.php'">Register</button>
@@ -177,12 +159,12 @@
     <div class="slide">
       <div class="video-container">
         <video class="video" autoplay loop muted>
-          <source src="Images/slide1.mp4" type="video/mp4">
+          <source src="Images\slide1.mp4" type="video/mp4">
         </video>
       </div>
       <div class="content">
-        <h1 style="background-color: rgba(54, 137, 131, 0.5);"><strong>Your Health is Our Priority!</strong></h1>
-        <p style="background-color: rgba(54, 137, 131, 0.5);">Just talk to Us and gain health.</p>
+        <h1 style="background-color: rgba(54, 137, 131, 0.5);"><strong>Are you an Employee?</strong></h1>
+        <p style="background-color: rgba(54, 137, 131, 0.5);">Join us to showercase your talents and be matched to amazing Employers</p>
         <div class="button-container">
           <button class="button" onclick="window.location.href='login.php'">Login</button>
           <button class="button" onclick="window.location.href='signUp.php'">Register</button>
@@ -193,12 +175,28 @@
     <div class="slide">
       <div class="video-container">
         <video class="video" autoplay loop muted>
-          <source src="Images/slide1.mp4" type="video/mp4">
+          <source src="Images\slide1.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="content">
+        <h1 style="background-color: rgba(54, 137, 131, 0.5);"><strong>Are you looking for innovative minds and talents?</strong></h1>
+        <p style="background-color: rgba(54, 137, 131, 0.5);">Just us today and get matched with amazing talents people!</p>
+        <div class="button-container">
+          <button class="button" onclick="window.location.href='login.php'">Login</button>
+          <button class="button" onclick="window.location.href='signUp.php'">Register</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="video-container">
+        <video class="video" autoplay loop muted>
+          <source src="Images\slide1.mp4" type="video/mp4">
         </video>
       </div>
       <div class="content">
         <h1 style="background-color: rgba(54, 137, 131, 0.5);"><strong>You are on the Right platform!</strong></h1>
-        <p style="background-color: rgba(54, 137, 131, 0.5);">Allow us to take care of your health.</p>
+        <p style="background-color: rgba(54, 137, 131, 0.5);">Just Register and login and Explore!</p>
         <div class="button-container">
           <button class="button" onclick="window.location.href='login.php'">Login</button>
           <button class="button" onclick="window.location.href='signUp.php'">Register</button>
@@ -209,7 +207,7 @@
     <div class="slide">
       <div class="video-container">
         <video class="video" autoplay loop muted>
-          <source src="Images/slide1.mp4" type="video/mp4">
+          <source src="Images\slide1.mp4" type="video/mp4">
         </video>
       </div>
       <div class="content">
@@ -221,9 +219,10 @@
         </div>
       </div>
     </div>
-    <button class="arrow left" onclick="prevSlide">&#8249;</button>
-    <button class="arrow right" onclick="nextSlide">&#8250;</button>
   </div>
+
+  <button class="arrow left" onclick="prevSlide">&#8249;</button>
+  <button class="arrow right" onclick="nextSlide">&#8250;</button>
 
   <script>
     let currentSlide = 0;
@@ -248,7 +247,7 @@
     function autoChangeSlide() {
       setInterval(() => {
         nextSlide();
-      }, 5000); // Change slide every 5 seconds
+      }, 5000); 
     }
 
     showSlide(currentSlide);

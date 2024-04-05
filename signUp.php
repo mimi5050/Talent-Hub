@@ -15,40 +15,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve form data and sanitize it
     $Username = mysqli_real_escape_string($conn, $_POST['Username']);
     $gender = mysqli_real_escape_string($conn, $_POST['gender']);
-    $maritalStatus = mysqli_real_escape_string($conn, $_POST['maritalStatus']);
-    $birthdate = mysqli_real_escape_string($conn, $_POST['birthdate']);
     $phoneNumber = mysqli_real_escape_string($conn, $_POST['phoneNumber']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
-    $confirmPassword = mysqli_real_escape_string($conn, $_POST['confirmPassword']);
     $userType = mysqli_real_escape_string($conn, $_POST['UserType']);
 
-    // Check if passwords match
-    if ($password !== $confirmPassword) {
-        // Set error message
-        $errorMsg = "Passwords do not match!";
+    // Hash the password
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+    // Prepare SQL statement to insert data into the users table
+    $sql = "INSERT INTO users (Username, Password, Email, Gender, ContactInfo, UserType) 
+            VALUES ('$Username', '$hashedPassword', '$email', '$gender', '$phoneNumber', '$userType')";
+
+    // Execute the SQL statement
+    if (mysqli_query($conn, $sql)) {
+        // Redirect user to signUp_successful.php upon successful registration
+        header("Location: signUp_successful.php");
+        exit();
     } else {
-        // Hash the password
-        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
-        // Prepare SQL statement to insert data into the users table
-        $sql = "INSERT INTO users (Username, Password, DateOfBirth, Gender, ContactInfo, UserType, Email, MaritalStatus) VALUES ('$Username', '$hashedPassword', '$birthdate', '$gender', '$phoneNumber', '$userType', '$email', '$maritalStatus')";
-
-        // Execute the SQL statement
-        if (mysqli_query($conn, $sql)) {
-            // Redirect user to signUp_successful.php upon successful registration
-            header("Location: signUp_successful.php");
-            exit();
-        } else {
-            // Display error message on signUp.php page
-            $errorMsg = "Error: " . $sql . "<br>" . mysqli_error($conn);
-        }
+        // Display error message on signUp.php page
+        $errorMsg = "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
     // Close the database connection
     mysqli_close($conn);
 }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Sign Up Page</title>
     <style>
         body {
-            background-image: url('Images/backgroundRegister.jpg');
+            background-image: url('Images/Talentshowcasing.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -78,10 +72,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         .signup-container h2 {
-            color: #0d452f;
+            color: #07bca3;
             margin: 20px;
             text-align: center;
-            background-color: rgba(54, 137, 131, 0.5);
         }
 
         .form-group {
@@ -92,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         .form-group label {
             display: block;
             margin-bottom: 5px;
-            color: #0d452f;
+            color:#07bca3;
         }
 
         .form-group input,
@@ -110,12 +103,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             padding: 10px;
             border: none;
             border-radius: 5px;
-            background-color: #0d452f;
+            background-color: #07bca3;
             color: white;
             cursor: pointer;
         }
-
-        /* Error message style */
         .error-message {
             color: red;
             margin-top: 5px;
@@ -149,19 +140,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </select>
             </div>
 
-            <!-- Marital Status Selection -->
-            <div class="form-group">
-                <label for="maritalStatus">Marital Status:</label>
-                <select id="maritalStatus" name="maritalStatus" required>
-                    <option value="Single">Single</option>
-                    <option value="Married">Married</option>
-                </select>
-            </div>
-            <!-- Birthdate Input -->
-            <div class="form-group">
-                <label for="birthdate">Birthdate:</label>
-                <input type="date" id="birthdate" name="birthdate" required>
-            </div>
             <!-- Phone Number Input -->
             <div class="form-group">
                 <label for="phoneNumber">Phone Number:</label>
@@ -180,19 +158,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     pattern="^(?=.*\d)(?=.*[a-zA-Z]).{8,}$" title="Minimum 8 characters, at least one letter and one digit"
                     placeholder="Enter your password" required>
             </div>
-            <!-- Confirm Password Input -->
-            <div class="form-group">
-                <label for="confirmPassword">Confirm Password:</label>
-                <input type="password" id="confirmPassword" name="confirmPassword"
-                    pattern="^(?=.*\d)(?=.*[a-zA-Z]).{8,}$" title="Minimum 8 characters, at least one letter and one digit"
-                    placeholder="Confirm your password" required>
-            </div>
+
 
             <div class="form-group">
                 <label for="UserType"> User Type</label>
                 <select id="UserType" name="UserType" required>
-                    <option value="doctor">A doctor</option>
-                    <option value="patient">A patient</option>
+                    <option value="employer">An employer</option>
+                    <option value="employee">An employee</option>
                 </select>
             </div>
             <!-- Submit Button -->
@@ -200,8 +172,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <button type="submit">Register</button>
             </div>
         </form>
-        <p style="text-align: center; background-color: rgba(54, 137, 131, 0.5);">Already have an account? <a
-                href="login.php">Login here</a></p> <!-- Login Link -->
+        <p style="text-align: center;">Already have an account? <a
+                href="login.php">Login here</a></p> 
     </div>
   
 </body>

@@ -1,12 +1,12 @@
 <?php
 // Database connection parameters
-$servername = "127.0.0.1";
+$servername = "localhost";
 $username = "root";
-$dbname = "onlinenatembea";
-$password = "cs341webtech";
+$dbname = "TalentHub";
+$password = " ";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, "", $dbname);
 
 // Check connection
 if ($conn->connect_error) {

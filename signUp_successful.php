@@ -19,11 +19,11 @@
     }
 
     h2 {
-      color: #0d452f;
+      color: #07bca3;
     }
 
     .button {
-      background-color: #0d452f;
+      background-color: #07bca3; 
       color: white;
       padding: 10px 20px;
       text-align: center;

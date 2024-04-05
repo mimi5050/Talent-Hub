@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $conn->real_escape_string($_POST['password']);
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
     $confirmPassword = $conn->real_escape_string($_POST['confirmPassword']);
-    $userType = $conn->real_escape_string($_POST['UserType']); // Assuming status is the same as userType
+    $userType = $conn->real_escape_string($_POST['UserType']); 
 
     // Create SQL insert statement
     $sql = "INSERT INTO users (FirstName, LastName, Gender, MaritalStatus, DateOfBirth, Email, Username, PhoneNumber, Password, ConfirmPassword, UserType) 

@@ -29,7 +29,7 @@
     }
 
     .button {
-      background-color: #0d452f;
+      background-color: #07bca3; /* Changed color */
       color: white;
       padding: 10px 20px;
       text-align: center;
@@ -49,7 +49,7 @@
   <div class="container">
     <h2>Record Saved Successfully!</h2>
     <p>Your record has been successfully saved in our system. Thank you for providing the necessary information.</p>
-    <a href="Patient_Records.php" class="button">Go Back to Patient Records</a>
+    <a href="Talent_showcasing.php" class="button">Go Back</a>
   </div>
 </body>
 

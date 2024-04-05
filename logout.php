@@ -23,12 +23,12 @@
   }
 
   h1 {
-    color: #0d452f;
+    color: #07bca3;
     margin-bottom: 20px;
   }
 
   .logout-btn {
-    background-color: #0d452f;
+    background-color: #07bca3;
     color: white;
     padding: 15px 30px;
     border: none;
@@ -39,16 +39,17 @@
   }
 
   .logout-btn:hover {
-    background-color: #0a2f20;
+    background-color: #05665e;
   }
 
   .icon {
     font-size: 24px;
     margin-right: 10px;
+    color: black;
   }
 
   .back-link {
-    color: #0d452f;
+    color: #07bca3;
     text-decoration: none;
     margin-top: 20px;
   }
@@ -63,7 +64,7 @@
   <form action="Index.php" method="post">
     <button type="submit" class="logout-btn"><i class="fas fa-sign-out-alt icon"></i>Logout</button>
   </form>
-  <a href="User_dashboard.php" class="back-link"><i class="fas fa-arrow-left icon"></i>Back to Dashboard</a>
+  <a href="employee_dashboard.php" class="back-link"><i class="fas fa-arrow-left icon"></i>Back to Dashboard</a>
 </div>
 
 </body>

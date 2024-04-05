@@ -11,7 +11,7 @@
       font-family: Arial, sans-serif;
       margin: 0;
       overflow: hidden;
-      background-color:#dedab6;
+      background-color: #dedab6;
     }
 
     .header {
@@ -41,9 +41,9 @@
     }
 
     .navigation a {
-      color: #0d452f;
+      color: #07bca3; 
       text-decoration: none;
-      margin-right: 30px;
+      margin-right: 60px;
       font-size: 18px;
       font-weight: bold;
     }
@@ -71,7 +71,7 @@
 
     .contact-form button {
       padding: 10px 20px;
-      background-color: #0d452f;
+      background-color: #07bca3; 
       color: #fff;
       border: none;
       border-radius: 5px;
@@ -93,7 +93,7 @@
     .contact-info-item i {
       font-size: 30px;
       margin-bottom: 10px;
-      color: #0d452f;
+      color: #07bca3; 
     }
 
     .contact-info-item p {
@@ -104,13 +104,12 @@
 
 <body>
   <div class="header">
-    <img class="logo" src="Images/logo.jpg" alt="Logo">
+    <img class="logo" src="Images/logo.png" alt="Logo">
     <div class="navigation">
       <a href="Index.php"> Home</a>
       <a href="AboutUs.php">About Us</a>
       <a href="ourservices.php">Our Services</a>
       <a href="contactUs.php">Contact Us</a>
-      <a href="Blog&News.php">Blog & News</a>
     </div>
   </div>
 
@@ -128,21 +127,22 @@
     <div class="contact-info">
       <div class="contact-info-item">
         <i class="fab fa-google"></i>
-        <p>contact@natembeaonline.com</p>
+        <p>contact@talentHub.com</p>
       </div>
       <div class="contact-info-item">
         <i class="fas fa-envelope"></i>
-        <p>contact@natembeaonline.com</p>
+        <p>contact@talentHub.com</p>
       </div>
       <div class="contact-info-item">
         <i class="fas fa-phone"></i>
-        <p>+1234567890</p>
+        <p>+250788567230</p>
       </div>
       <div class="contact-info-item">
         <i class="fab fa-instagram"></i>
-        <p>@natembeaonline</p>
+        <p>@talentHub</p>
       </div>
     </div>
   </div>
 </body>
+
 </html>
